@@ -1,0 +1,29 @@
+Array, length of a segment, target sum.
+Total number of segments which sum up to the target sum.
+Let the array be a[], seg size=m, target sum =t, array size=n.
+start with a[0] sum upto a[m-1]. Check if its equal to t and if it is, increment the counter by 1.
+
+for(int i=0;i<n-m;i++){
+    sum=0;
+    for(int j=i;j<=i+m;j++){
+        sum+=a[j];
+    }
+    if(sum==t) count++;
+}
+
+a[0] a[1] a[2] a[3] a[4];
+
+prefix[5]
+
+prefix[0]=a[0]p
+
+prefix[1]=a[0]+a[1]
+
+prefix[2]=a[0]+a[1]+a[2]
+
+prefix[3]=prefix[2]+a[3]
+
+
+prefix[3]-prefix[1]+a[1]
+
+a[0]+a[1]+a[2]+a[3]-(a[0]+a[1])+a[1]==a[1]+a[2]+a[3]
